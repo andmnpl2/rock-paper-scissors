@@ -11,7 +11,7 @@
 
     //3. Function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’ 
     function computerPlay () {
-         let randomNumber = Math.floor(Math.random() *3);
+        let randomNumber = Math.floor(Math.random() *3);
         
         if (randomNumber == 0) {
           return "rock";
@@ -76,12 +76,27 @@
         
     }
   
-    //5. Write a NEW function called game()
+    //5. Write a NEW function called game().
+    //Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
     function game () {
-      //let 
+     
+    
+      for (let i = 0; i < 5; i++) {
         
-    }
+        let playerSelection = prompt("What is your choice? \n Paper - Rock - Scissors");
+        let computerSelection = computerPlay();
 
+        playRound (playerSelection, computerSelection);
+
+        if (playRound(playerSelection, computerSelection)) {
+          
+        } else {
+          
+        }
+
+      
+      }
+    }
          /*console.log(computerPlay);*/
   </script>
 </body>
