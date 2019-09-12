@@ -9,6 +9,7 @@
 <body>
   <script>
 
+    //3. Function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’ 
     function computerPlay () {
          let randomNumber = Math.floor(Math.random() *3);
         
@@ -25,23 +26,63 @@
                   
       }
   
-      function playRound (playerSelection,computerSelection) {
-        if (playerSelection.toLowerCase() == "rock"){
-          switch (computerSelection == "rock"){
-            return "tie";
+    //4. Write a function that plays a single round of Rock Paper Scissors
+    function playRound (playerSelection,computerSelection) {
+
+      if (playerSelection.toLowerCase == "rock") {
+
+          if (computerSelection == "rock") {
+            return "Equality";            
+          } 
+          
+          else if (computerSelection.toLowerCase == "paper"){
+            return "You Lose! Paper beats Rock"
+
+          } else {
+            return "You Win ! Rock beats Scissors"
+            
           }
-          if else (playerSelection.toLowerCase() == "paper") {
-            return "comp";
+          
+        }
+        
+      else if (playerSelection.toLowerCase == "paper") {
+
+          if (computerSelection == "rock") {
+            return "You Win! Paper beats Rock";
           }
+          else if (computerSelection == "paper") {
+            return "Equality";
+            
+          } else {
+            return "You Lose! Scissors beats Paper";
+            
+          }
+            
+      } else {
+
+        if (computerSelection == "rock") {
+          return "You Win ! Rock beats Scissors";
         }
 
-      }
-      /*     
-    function game () {
-         return value + 7;
-    }*/
+        else if (computerSelection == "paper"){
+          return "You Win ! Scissors beats Paper";
 
-         console.log(computerPlay);
+        } else {
+          return "Equality";
+        }
+
+        
+      }
+        
+    }
+  
+    //5. Write a NEW function called game()
+    function game () {
+      //let 
+        
+    }
+
+         /*console.log(computerPlay);*/
   </script>
 </body>
 
