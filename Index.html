@@ -9,12 +9,40 @@
 <body>
   <script>
 
-       function computerPlay (value) {
+    function computerPlay () {
+         let randomNumber = Math.floor(Math.random() *3);
+        
+        if (randomNumber == 0) {
+          return "rock";
+        }
+        
+        else if (randomNumber == 1) {
+           return "paper";
+        
+        }
+        else
+          return "scissors";
+                  
+      }
+  
+      function playRound (playerSelection,computerSelection) {
+        if (playerSelection.toLowerCase() == "rock"){
+          switch (computerSelection == "rock"){
+            return "tie";
+          }
+          if else (playerSelection.toLowerCase() == "paper") {
+            return "comp";
+          }
+        }
+
+      }
+      /*     
+    function game () {
          return value + 7;
-         }
+    }*/
 
-         console.log(add7);
-
+         console.log(computerPlay);
   </script>
 </body>
+
 </html>
