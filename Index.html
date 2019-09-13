@@ -42,7 +42,7 @@
             return "Tie!";            
           } 
           
-          else if (computerSelection.toLowerCase == "paper"){
+          else if (computerSelection == "paper"){
             compScore++;
             return "You Lose! Paper beats Rock"
 
@@ -79,16 +79,16 @@
 
         else if (computerSelection == "paper"){
           playerScore++;
-          return "You Win! Scissors beats Paper";
+          return "You Win! Scissors beats Rock";
 
         } else {
           tieScore++;
           return "Tie!";
+        
         }
 
         
       }
-        
     }
   
     //5. Write a NEW function called game().
@@ -108,15 +108,15 @@
 
     game();
 
+    // Feel free to create more “helper” functions if you think it would be useful.
+
     function finalScore (compScore,playerScore){
       
-      let finalScore = compScore;
-
       if (compScore<playerScore){
-        return "You won!";
+        return  "Computer Score: "+compScore + " Your Score: " + playerScore + " Tie: " + tieScore +"\nYou won!";
 
       } else {
-        return "You lost!";
+        return "Computer Score: "+compScore + " Your Score: " + playerScore + " Tie: " + tieScore +"\nYou lost!"; 
       }
     }
 
